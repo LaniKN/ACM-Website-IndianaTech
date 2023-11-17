@@ -1,0 +1,66 @@
+
+@font-face {
+  font-family: 'outfit_oneregular';
+  src: url('../../public/assets/Outfit-Regular.woff2') format('woff2'),
+       url('../../public/assets/Outfit-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.space {
+  height:15vh;
+}
+
+.mainHome {
+  align-items: center;
+}
+
+.mainHome>.introContainer {
+  flex-direction:row;
+  display:flex;
+  justify-content:space-around;
+  margin-bottom: 5vh;
+}
+
+header {
+  font-weight:600;
+  text-align:center;
+
+}
+
+.blurb {
+  background-color: #FFFFFF;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 50px;
+  text-overflow: wrap;
+  width: 45vh;
+  font-family: outfit_oneregular;
+}
+
+.eventsContainer {
+  background-color: #FAFAFA;
+  opacity: 50%;
+  width: 100%;
+  height: 25vh;
+  flex-direction:row;
+  margin-bottom:5vh;
+}
+
+.recentEventBlurb {
+  background-color: white;
+  font-family: outfit_oneregular;
+  padding:20px;
+  justify-content:center;
+  margin-bottom:5vh;
+  border-style:solid;
+  border-color:transparent;
+  border-radius:10px;
+}
+
+.recentEventBlurb>.txtDesc {
+  text-overflow:wrap;
+  width:90vw;
+  text-align:block;
+}
+

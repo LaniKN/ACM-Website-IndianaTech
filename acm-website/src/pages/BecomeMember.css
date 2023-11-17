@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'outfit_oneregular';
+    src: url('../../public/assets/Outfit-Regular.woff2') format('woff2'),
+         url('../../public/assets/Outfit-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+
+.BecomeMember {
+     display:flex;
+     flex-direction:column;
+     align-items:center;
+     margin-bottom:5vh;
+}
+
+.Info {
+     background-color:white;
+     margin-top: 5%;
+     border-top-style:solid;
+     border-top-color: transparent;
+     border-top-right-radius: 10px;
+     border-top-left-radius: 10px;
+     text-overflow: wrap;
+     width: 90vw;
+     padding: 40px;
+     padding-top: 20px;
+     font-family: outfit_oneregular;
+}
+
+.Info>body {
+     margin-top: 20px;
+     text-align:justify;
+     font-family: outfit_oneregular;
+     font-size: x-large;
+}
+
+.FormContainer {
+     display:flex;
+     flex-direction:row;
+     width: 90vw;
+     padding: 40px;
+     background-color:white;
+     justify-content:space-around;
+     padding-bottom: 30px;
+     border-bottom-style:solid;
+     border-bottom-color:transparent;
+     border-bottom-right-radius:10px;
+     border-bottom-left-radius: 10px;
+}
+
+.MemberForm {
+     flex-direction:column;
+     position:relative;
+     border-style:solid;
+     border-radius: 5px;
+     border-color:#3C5B76;
+}
+
+.question {
+     margin:40px;
+     padding:15px;
+     border-bottom-style:solid;
+     border-color:black;
+     font-family: outfit_oneregular;
+     font-size:large;
+}
+
+select {
+     margin-left:5px;
+     padding:5px;
+     font-family:outfit_oneregular;
+     font-size:large;
+}
+.choice {
+     padding:5px;
+     font-family:outfit_oneregular;
+     font-size:large;
+}
+
+.txtResponse {
+     padding:5px;
+     font-family: outfit_oneregular;
+     font-size:large;
+     margin-left:5px;
+}
+
+img {
+     object-fit:contain;
+     width: 100%;
+     height: 100%;
+}
+
+.doodleContain1 {
+     display:flex;
+     align-items:flex-end;
+}
+
+.doodle1 {
+     height: 37.5vh;
+     width: 25vw;
+     align-items:flex-end;
+}
+
+.doodle2 {
+     height: 40vh;
+     width: 25vw;
+     align-items:flex-start;
+}
+
+.submitContain {
+     margin:40px;
+}
+
+.submit {
+     padding: 15px;
+     font-family:outfit_oneregular;
+     font-size:x-large;
+     background-color: #6A859C;
+     color:white;
+     border-radius:10px;
+}
+
