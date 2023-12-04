@@ -5,7 +5,7 @@ import instaIcon from '../assets/insta.png';
 
 const InfoBar = () => {
     return(
-        <div className="container">
+        <footer className="container">
             <div className='infoText'>
                 <p>Created by Kala Meyer for the ACM Chapter at Indiana Tech</p>
             </div>
@@ -17,7 +17,7 @@ const InfoBar = () => {
                     <img href='https://www.instagram.com/indianatech.acm/' src={instaIcon} alt='Instagram Logo' className='logoInfo'/>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 

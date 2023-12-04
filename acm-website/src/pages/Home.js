@@ -2,6 +2,7 @@ import './Home.css';
 import React from 'react';
 import RecentEvent from '../Components/recentEvent';
 import InfoBar from '../Components/InfoBar/index';
+import acmImg from '../Components/assets/reflectionProjection/IMG_3877.jpg';
 
 const Home = () => {
   return (
@@ -15,13 +16,9 @@ const Home = () => {
               We meet on the third Friday of every month at 12:15 PM this semester! 
             </body>
           </div>
-          <p>Img Here</p>
-        </div>
-        <div className = "eventsContainer">
-         {/* <UpcomingEvent1/> */}
-         {/* <UpcomingEvent2/> */}
-         {/* <UpcomingEvent3/> */}
-        </div>
+            <img src={acmImg} alt="img of members talking" className='acmImg'/>       
+          </div>
+        
         <div className = 'recentEventBlurb'>
           <RecentEvent/>
         </div>

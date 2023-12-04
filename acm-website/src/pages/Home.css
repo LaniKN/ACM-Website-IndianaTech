@@ -13,6 +13,7 @@
 
 .mainHome {
   align-items: center;
+  position:relative;
 }
 
 .mainHome>.introContainer {
@@ -52,10 +53,11 @@ header {
   font-family: outfit_oneregular;
   padding:20px;
   justify-content:center;
-  margin-bottom:5vh;
+  margin-bottom:10vh;
   border-style:solid;
   border-color:transparent;
   border-radius:10px;
+
 }
 
 .recentEventBlurb>.txtDesc {
@@ -64,3 +66,9 @@ header {
   text-align:block;
 }
 
+.acmImg {
+  object-fit:fill;
+  border-radius:5%;
+  width:35vw;
+  height: 45vh;
+}
