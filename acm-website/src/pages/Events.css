@@ -12,45 +12,50 @@ header {
     text-align:center;
   
   }
-  
 
   .eventsPage{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-around;
   }
 
-  .eventsInfo {
+  .eventsInfo {   
+    margin-bottom:10px;
+    height:auto;
     margin-bottom:10vh;
-    width:100vw;
-    display:flex;
-    align-items:center;
-    justify-content:space-around; 
-    border-style:solid;
-    height:100vh;
+    padding:50px;
+    background-color: rgba(255,255,255,0.25);
   }
 
   .fallEvents{
     display:flex;
     flex-direction:column;
-    align-items:center;
+    align-items: center;
   }
 
   .event{
-    /* background-color:white; */
+    background-color:white;
     width:75vw;
-    border-style:solid;
-    height: 20vh;
+    border-radius:10px;
+    height: auto;
     margin:10px;
     object-fit:contain;
 
   }
 
-  .container{
+  .containerEvents{
     display:flex;
     flex-direction:row;
     width:100%;
     justify-content:space-around;
+    margin:10px;
+    margin-bottom:20px;
+  }
+
+  .info {
+    text-overflow:clip;
+    width:75%;
+    
   }
 
   .moreBtn {
@@ -60,5 +65,11 @@ header {
     border-radius:10px;
     background-color:#6A859C;
     font-family: 'outfit_oneregular';
-    font-size:larger;
+    font-size:large;
+    width:10vw;
+    @media screen and (max-width: 768px) {
+      font-size:small;
+      text-overflow:wrap;
+      text-align:justify ;
+  }
   }

@@ -9,8 +9,7 @@ const RecentEvent = () => {
                 Reflection Projection Conference
             </header>
             <p className = 'txtDesc'>
-                blurb about event goes here. here I am talking about random things to test the wrap
-                if the overflow wrap is correct then this should wrap after filling 75 % of the screen.
+            The Reflection Projections Conference is a yearly conference hosted by the ACM club of the Univeristy of Illinois Urbana-Champaigne.
             </p>
         </>
     )

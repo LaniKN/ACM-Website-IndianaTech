@@ -21,6 +21,7 @@
   display:flex;
   justify-content:space-around;
   margin-bottom: 5vh;
+  flex-wrap:wrap;
 }
 
 header {
@@ -53,7 +54,7 @@ header {
   font-family: outfit_oneregular;
   padding:20px;
   justify-content:center;
-  margin-bottom:10vh;
+  margin-bottom:15vh;
   border-style:solid;
   border-color:transparent;
   border-radius:10px;
@@ -69,6 +70,11 @@ header {
 .acmImg {
   object-fit:fill;
   border-radius:5%;
-  width:35vw;
-  height: 45vh;
+  width:25%;
+  height: 10%;
+  @media screen and (max-width: 768px) {
+    width:75%;
+    heigth:25%;
+    margin-top:20px;
+}
 }

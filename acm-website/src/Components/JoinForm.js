@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import '../pages/BecomeMember.css';
+import axios from 'axios';
 
-export function JoinForm() {
+
+
+const JoinForm = () => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("")
     const [prefName, setPrefName] = useState("")
@@ -9,64 +12,79 @@ export function JoinForm() {
     const [setYear] = useState("");
     const [major, setMajor] = useState("");
     const [setGender] = useState("");
+    // const scriptUrl = "https://script.google.com/macros/s/AKfycbw4OgSGYNRQsM1V3EKRu64yDKhr2aSRfyMSL-RJ-YMs5r9hd_GiFodGibmuo9qXiUI30g/exec"
+    const scriptUrl = "https://sheetdb.io/api/v1/rqf1o6d61x43t"
+    const formRef = useRef(null)
+
+
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+
+        fetch(scriptUrl, {method: 'POST', mode:'no-cors', body: new FormData(formRef.current)})
+        .then(res => {
+            console.log("SUCCESSFULLY SUBMITTED")
+        })
+        .catch(err => console.log(err))
+    }
+
 
     return (
         <div>
-            <form className = 'MemberForm'>
+            <form  className='MemberForm' onSubmit={(e)=>handleSubmit(e)} metohd="POST" ref={formRef} name="member-form">
                 <div className="question">
-                    <label>
+                    <label htmlFor='FirstName'>
                         First Name:
-                        <input type="text" className="txtResponse" placeholder="Jane" value={firstName} onChange={(e) => setFirstName(e.target.value)} required
+                        <input type="text" className="txtResponse" name="FirstName" placeholder="Jane" value={firstName} onChange={(a) => setFirstName(a.target.value)} required
                         />
                     </label>
                 </div>
                 <div className="question">
-                    <label>
+                    <label htmlFor='LastName'>
                         Last Name:
-                        <input type="text" className="txtResponse" placeholder="Doe" value={lastName} onChange={(e) => setLastName(e.target.value)} required
+                        <input type="text" className="txtResponse" name="LastName" placeholder="Doe" value={lastName} onChange={(a) => setLastName(a.target.value)} required
                         />
                     </label>
                 </div>
                 <div className="question">
-                    <label>
+                    <label htmlFor='PrefName'>
                         Preferred Name(opt.) :
-                        <input type="text" className="txtResponse" placeholder="John" value={prefName} onChange={(e) => setPrefName(e.target.value)} required
+                        <input type="text" className="txtResponse" name="PrefName" placeholder="John" value={prefName} onChange={(a) => setPrefName(a.target.value)} 
                         />
                     </label>
                 </div>
                 <div className="question">
-                    <label>
+                    <label htmlFor='Email'>
                         Indiana Tech Email Address:
-                        <input type="text" className="txtResponse" placeholder="myEmail01@indianatech.net" value={email} onChange={(e) => setemail(e.target.value)} required
+                        <input type="email" className="txtResponse" name="Email" placeholder="myEmail01@indianatech.net" value={email} onChange={(a) => setemail(a.target.value)} required
                         />
                     </label>
                 </div>
                 <div className="question">
-                    <label>
+                    <label htmlFor='Year'>
                         Year in School, or equivalent:
-                        <select required>
-                            <option className="choice" value="Freshman (1st year)" onSelect={(e) => setYear(e.target.value)}>Freshman (1st Year)</option>
-                            <option className="choice" value="Sophomore (2nd year)" onSelect={(e) => setYear(e.target.value)}>Sophomore (2nd Year)</option>
-                            <option className="choice" value="Junior (3rd year)" onSelect={(e) => setYear(e.target.value)}>Junior (3rd Year)</option>
-                            <option className="choice" value="Senior (4th year)" onSelect={(e) => setYear(e.target.value)}>Senior (4th Year)</option>
+                        <select name = "Year" required>
+                            <option className="choice" value="Freshman (1st year)" onSelect={(a) => setYear(a.target.value)}>Freshman (1st Year)</option>
+                            <option className="choice" value="Sophomore (2nd year)" onSelect={(a) => setYear(a.target.value)}>Sophomore (2nd Year)</option>
+                            <option className="choice" value="Junior (3rd year)" onSelect={(a) => setYear(a.target.value)}>Junior (3rd Year)</option>
+                            <option className="choice" value="Senior (4th year)" onSelect={(a) => setYear(a.target.value)}>Senior (4th Year)</option>
                         </select>
                     </label>
                 </div>
                 <div className="question">
-                    <label>
+                    <label htmlFor="Major">
                         Major:
-                        <input type="text" className="txtResponse" value={major} onChange={(e) => setMajor(e.target.value)} required
+                        <input type="text" className="txtResponse" name="Major" value={major} onChange={(a) => setMajor(a.target.value)} required
                         />
                     </label>
                 </div>
                 <div className="question">
-                    <label>
+                    <label htmlFor="Gender">
                         Gender:
-                        <select required>
-                            <option className="choice" value="Male" onSelect={(e) => setGender(e.target.value)}>Male</option>
-                            <option className="choice" value="Female" onSelect={(e) => setGender(e.target.value)}>Female</option>
-                            <option className="choice" value="Non-binary or Gender Diverse" onSelect={(e) => setGender(e.target.value)}>Non-binary or Gender Diverse</option>
-                            <option className="choice" value="Prefer not to say" onSelect = {(e) => setGender(e.target.value)}>Prefer Not to Say</option>
+                        <select name="Gender" required>
+                            <option className="choice" value="Male" onSelect={(a) => setGender(a.target.value)}>Male</option>
+                            <option className="choice" value="Female" onSelect={(a) => setGender(a.target.value)}>Female</option>
+                            <option className="choice" value="Non-binary or Gender Diverse" onSelect={(a) => setGender(a.target.value)}>Non-binary or Gender Diverse</option>
+                            <option className="choice" value="Prefer not to say" onSelect = {(a) => setGender(a.target.value)}>Prefer Not to Say</option>
                         </select>
                     </label>
                 </div>
@@ -76,5 +94,6 @@ export function JoinForm() {
             </form>
         </div>
     )
-
 }
+
+export default JoinForm

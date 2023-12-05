@@ -121,3 +121,11 @@ img {
      border-radius:10px;
 }
 
+.submit:active{
+     color:#3C5B76;
+     background-color:lightgray;
+}
+
+.submit:hover {
+     background-color: #3C5B7680
+}
