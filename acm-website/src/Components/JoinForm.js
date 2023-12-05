@@ -93,6 +93,7 @@ const JoinForm = () => {
                             <option className="choice" value="Male" onSelect={(a) => setGender(a.target.value)}>Male</option>
                             <option className="choice" value="Female" onSelect={(a) => setGender(a.target.value)}>Female</option>
                             <option className="choice" value="Non-binary or Gender Diverse" onSelect={(a) => setGender(a.target.value)}>Non-binary or Gender Diverse</option>
+                            <option className="choice" value="Other" onSelect = {(a) => setGender(a.target.value)}>Other</option>
                             <option className="choice" value="Prefer not to say" onSelect = {(a) => setGender(a.target.value)}>Prefer Not to Say</option>
                         </select>
                     </label>
