@@ -1,10 +1,7 @@
 import React from 'react';
 import './modal.css';
 import reflectionProjectionImg from '../assets/reflectionProjection/IMG_3877.jpg';
-import gameJamImg1 from '../assets/gameJam/IMG_8604.JPEG';
-import gameJamImg2 from '../assets/gameJam/IMG_8606.JPEG';
 import gameJamImg3 from '../assets/gameJam/discussion.JPEG';
-import gameJamImg4 from '../assets/gameJam/presentation.jpg';
 
 var event = require('./events.json');
 
