@@ -8,28 +8,8 @@ import gameJamImg4 from '../assets/gameJam/presentation.jpg';
 
 var event = require('./events.json');
 
-var slideIndex = 1;
-
 
 const Event = ({id, open, onClose}) => {
-    const plusSlides = (n) => {
-        showSlides(slideIndex += n);
-    }
-    
-    const currentSlide = (n) => {
-        showSlides(slideIndex = n);
-    }
-    
-    const showSlides = (n) => {
-        let i;
-        let slides = document.getElementsByClassName("imgSlides");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex-1].style.display = "block";
-    }
     
     const arrPlace = id - 1;
     if(!open) return null;
