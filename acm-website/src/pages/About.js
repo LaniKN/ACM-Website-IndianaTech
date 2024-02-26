@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import presImg from '../Components/assets/officerImgs/kalaPres.jpeg';
+import presImg from '../Components/assets/officerImgs/kalaPres.jpg';
 import vpImg from '../Components/assets/officerImgs/BroxstonVP.jpg';
 import secretary from '../Components/assets/officerImgs/elinSecretary.jpeg';
 import treasurer from '../Components/assets/officerImgs/MylesTreasurer.jpg';
