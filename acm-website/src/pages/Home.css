@@ -1,0 +1,80 @@
+
+@font-face {
+  font-family: 'outfit_oneregular';
+  src: url('../../public/assets/Outfit-Regular.woff2') format('woff2'),
+       url('../../public/assets/Outfit-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.space {
+  height:15vh;
+}
+
+.mainHome {
+  align-items: center;
+  position:relative;
+}
+
+.mainHome>.introContainer {
+  flex-direction:row;
+  display:flex;
+  justify-content:space-around;
+  margin-bottom: 5vh;
+  flex-wrap:wrap;
+}
+
+header {
+  font-weight:600;
+  text-align:center;
+
+}
+
+.blurb {
+  background-color: #FFFFFF;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 50px;
+  text-overflow: wrap;
+  width: 45vh;
+  font-family: outfit_oneregular;
+}
+
+.eventsContainer {
+  background-color: #FAFAFA;
+  opacity: 50%;
+  width: 100%;
+  height: 25vh;
+  flex-direction:row;
+  margin-bottom:5vh;
+}
+
+.recentEventBlurb {
+  background-color: white;
+  font-family: outfit_oneregular;
+  padding:20px;
+  justify-content:center;
+  margin-bottom:15vh;
+  border-style:solid;
+  border-color:transparent;
+  border-radius:10px;
+
+}
+
+.recentEventBlurb>.txtDesc {
+  text-overflow:wrap;
+  width:90vw;
+  text-align:block;
+}
+
+.acmImg {
+  object-fit:fill;
+  border-radius:5%;
+  width:25%;
+  height: 10%;
+  @media screen and (max-width: 768px) {
+    width:75%;
+    heigth:25%;
+    margin-top:20px;
+}
+}

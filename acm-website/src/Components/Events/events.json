@@ -1,0 +1,19 @@
+
+[
+
+    {
+        "id": 1,
+        "name": "Reflection Projection 2023",
+        "desc": "For this event, we travelled to the University of Illinois Urbana-Champaign to attend their Reflection Projections event. We were able to talk to other students, attend educational and informative tech talks, and overall explore the campus and college town.",
+        "semester": 10
+    },
+    {
+        "id": 2,
+        "name": "2023 Fall Game Jam",
+        "desc": "During this event, we delve into the different aspects of game design. We also listened to a presentation by USC Game Development student Gage Tilly, an aspiring game developer and designer. He was able to provide knoweldge on both general and career oriented game development, as well as how game jam's run!",
+        "semester": 10
+    }
+
+]
+
+
